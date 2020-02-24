@@ -1,0 +1,21 @@
+{
+  "name": "developwebpack",
+  "version": "1.0.0",
+  "description": "Esto será divertido",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --entry ./index.js --output ./bundle.js --mode development",
+    "build:local": "webpack --mode production",
+    "build:external": "webpack --config ./external/webpack.config.js"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "Ismael JDz",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "4.32.2",
+    "webpack-cli": "3.3.2"
+  }
+}
