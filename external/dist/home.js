@@ -86,14 +86,26 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./external/css/index.css":
+/*!********************************!*\
+  !*** ./external/css/index.css ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./external/css/index.css?");
+
+/***/ }),
+
 /***/ "./external/index.js":
 /*!***************************!*\
   !*** ./external/index.js ***!
   \***************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("console.log(\"Hola mundo\");\n\n\n//# sourceURL=webpack:///./external/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/index.css */ \"./external/css/index.css\");\n/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_index_css__WEBPACK_IMPORTED_MODULE_0__);\n\n\ndocument.body.innerHTML = \"Hola mundo desde webpack :)\";\n\n\n//# sourceURL=webpack:///./external/index.js?");
 
 /***/ })
 

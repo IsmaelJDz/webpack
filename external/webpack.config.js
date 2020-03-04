@@ -1,10 +1,38 @@
 const path = require("path");
+// Style loader
+// Loaders -> Module -> Rules
+// Plugins -> Extender los poderes de los loaders ->
+const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: path.resolve(__dirname, "./index.js"),
+  entry: {
+    home: path.resolve(__dirname, "./index.js")
+  },
   mode: "development",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js"
-  }
+    filename: "[name].js"
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: MiniCSSExtractPlugin.loader
+          },
+          "css-loader"
+        ]
+      }
+    ]
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: "Plugins"
+    }),
+    new MiniCSSExtractPlugin({
+      filename: "css/[name].css"
+    })
+  ]
 };
