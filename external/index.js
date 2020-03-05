@@ -1,3 +1,11 @@
 import "./dist/css/home.css";
+import text from "./text";
 
-document.body.innerHTML = "Hola mundo desde webpack :)";
+text();
+
+if (module.hot) {
+  module.hot.accept("./text.js", function() {
+    console.log("he recargado en caliente");
+    text();
+  });
+}
